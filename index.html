@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROJECT X REGISTRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="logo-container">
+  <div class="logo-title">PROJECT <span class="highlight-x">X</span></div>
+  <div class="logo-subtitle">REGISTRO</div>
+</div>
+<main>
+<form id="form" class="card">
+<div class="grid">
+<label>
+<span>Nombres</span>
+<input type="text" id="nombres" name="nombres" required placeholder="Ej. Juan">
+</label>
+<label>
+<span>Apellidos</span>
+<input type="text" id="apellidos" name="apellidos" required placeholder="Ej. Pérez">
+</label>
+<label>
+<span>DNI</span>
+<input type="text" id="dni" name="dni" required placeholder="12345678">
+</label>
+<label>
+<span>Teléfono</span>
+<input type="tel" id="telefono" name="telefono" required placeholder="987654321">
+</label>
+<label>
+<span>Correo electrónico</span>
+<input type="email" id="correo" name="correo" required placeholder="juan@example.com">
+</label>
+<label>
+<span>Edad</span>
+<input type="number" id="edad" name="edad" required min="1" max="120" placeholder="25">
+</label>
+</div>
+<div class="actions">
+<button type="submit" class="primary">Enviar</button>
+<button type="button" id="clearAll" class="danger">Vaciar lista</button>
+<button type="button" id="exportCsv">Exportar CSV</button>
+<button type="button" id="exportJson">Exportar JSON</button>
+</div>
+</form>
+
+<section class="card">
+<table id="tabla">
+<thead>
+<tr>
+<th>Nombres</th>
+<th>Apellidos</th>
+<th>DNI</th>
+<th>Teléfono</th>
+<th>Correo</th>
+<th>Edad</th>
+<th>Acciones</th>
+</tr>
+<thead>
+<tbody></tbody>
+</table>
+</section>
+</main>
+<div id="toast-container"></div>
+<script src="script.js"></script>
+</body>
+</html>
